@@ -2,6 +2,7 @@
 <html>
 <title>VITCMUN 2020</title>
 <meta charset="UTF-8">
+
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
@@ -16,11 +17,11 @@
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.html">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css"> -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css"> -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-pink.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/brands.css" integrity="sha384-oT8S/zsbHtHRVSs2Weo00ensyC4I8kyMsMhqTD4XrWxyi8NHHxnS0Hy+QEtgeKUE" crossorigin="anonymous">
+
 <!-- icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -42,10 +43,12 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132819915-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
+
     function gtag() {
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
+
     gtag('config', 'UA-132819915-1');
 </script>
 
@@ -68,7 +71,6 @@
 <meta http-equiv="Expires" content="0" />
 
 
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--NOTE:: Added smooth scrolling-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -76,17 +78,21 @@
     $(document).ready(function() {
         // Add smooth scrolling to all links
         $("a").on('click', function(event) {
+
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
                 // Prevent default anchor click behavior
                 event.preventDefault();
+
                 // Store hash
                 var hash = this.hash;
+
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
                 }, 800, function() {
+
                     // Add hash (#) to URL when done scrolling (default click behavior)
                     window.location.hash = hash;
                 });
@@ -139,6 +145,7 @@
     .hover-newpink{
         color:#e6b2c8;
     }
+
     #apply {
         position: fixed;
         cursor: pointer;
@@ -153,12 +160,14 @@
         font-size: 1.5em;
         letter-spacing: 0.07em;
     }
+
     #apply .text {
         font-family: ;
         transform: translate3d(0, 0.7em, 0);
         display: block;
         transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
     }
+
     #apply:after {
         position: absolute;
         content: '';
@@ -171,10 +180,12 @@
         transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
         transform-origin: left;
     }
+
     .line {
         position: absolute;
         background: #f26522;
     }
+
     .line.-right,
     .line.-left {
         width: 3px;
@@ -182,6 +193,7 @@
         top: -3px;
         transform: scale3d(1, 0, 1);
     }
+
     .line.-top,
     .line.-bottom {
         height: 3px;
@@ -189,31 +201,37 @@
         right: -3px;
         transform: scale3d(0, 1, 1);
     }
+
     .line.-right {
         right: -3px;
         transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
         transform-origin: top;
     }
+
     .line.-top {
         top: -3px;
         transition: transform 0.08s linear 0.43s;
         transform-origin: left;
     }
+
     .line.-left {
         left: -3px;
         transition: transform 0.08s linear 0.51s;
         transform-origin: bottom;
     }
+
     .line.-bottom {
         bottom: -3px;
         transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
         transform-origin: right;
     }
+
     #apply:hover .text,
     #apply:active .text {
         transform: translate3d(0, 0, 0);
         transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
     }
+
     #apply:hover:after,
     #apply:active:after {
         transform: scale3d(0, 1, 1);
@@ -222,30 +240,37 @@
         transform-origin: right;
         transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
     }
+
     #apply:hover .line,
     #apply:active .line {
         transform: scale3d(1, 1, 1);
     }
+
     #apply:hover .line.-right,
     #apply:active .line.-right {
         transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
         transform-origin: bottom;
     }
+
     #apply:hover .line.-top,
     #apply:active .line.-top {
         transition: transform 0.08s linear 0.4s;
         transform-origin: right;
     }
+
     #apply:hover .line.-left,
     #apply:active .line.-left {
         transition: transform 0.08s linear 0.48s;
         transform-origin: top;
     }
+
     #apply:hover .line.-bottom,
     #apply:active .line.-bottom {
         transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
         transform-origin: left;
+
     }
+
     body,
     h1,
     h2,
@@ -255,6 +280,7 @@
     h6 {
         font-family: "PT Sans", Sans-Serif;
     }
+
     p {
         font-family: "PT Sans", Sans-Serif;
         font-style: normal;
@@ -272,15 +298,18 @@
     .w3-row-padding img {
         margin-bottom: 12px
     }
+
     /* Set the width of the sidebar to 120px */
     .w3-sidebar {
         width: 120px;
         background: #0B0B14;
     }
+
     /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
     #main {
         margin-left: 120px
     }
+
     /* Remove ma.rgins from "page content" on small screens */
     @media only screen and (max-width: 600px) {
         #main {
@@ -291,30 +320,37 @@
             margin-left: 100px;
         }
     }
+
     @-webkit-keyframes fadeIn {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
+
     @-o-keyframes fadeIn {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
+
     .fade-in {
         opacity: 0;
         -webkit-animation: fadeIn ease-in 1;
@@ -327,24 +363,28 @@
         -o-animation-duration: 1s;
         animation-duration: 1s;
     }
+
     .fade-in.one {
         -webkit-animation-delay: 1s;
         -o-animation-delay: 1s;
         animation-delay: 1s;
         font-size: 40px;
     }
+
     .fade-in.two {
         -webkit-animation-delay: 2s;
         -o-animation-delay: 2s;
         animation-delay: 2s;
         font-size: 40px;
     }
+
     .fade-in.three {
         -webkit-animation-delay: 3s;
         -o-animation-delay: 3s;
         animation-delay: 3s;
         font-size: 40px;
     }
+
     .fade-in.four {
         -webkit-animation-delay: 4s;
         -o-animation-delay: 4s;
@@ -365,6 +405,7 @@
     .fa:hover {
   opacity: 0.7;
 }
+
 
 /* Facebook */
 .fa-facebook {
@@ -393,21 +434,25 @@
         border-radius: 10px;
         background-color: #565555;
     }
+
     #style-2::-webkit-scrollbar {
         width: 12px;
         background-color: #565555;
     }
+
     #style-2::-webkit-scrollbar-thumb {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
         background-color: #666666;
     }
+
     a,
     i,
     p,
     body {
         text-decoration: none;
     }
+
     #clockdiv {
         font-family: sans-serif;
         color: #000;
@@ -416,35 +461,25 @@
         text-align: center;
         font-size: 30px;
     }
+
     #clockdiv>div {
         padding: 10px;
         border-radius: 3px;
         background: #fff;
         display: inline-block;
     }
+
     #clockdiv div>span {
         padding: 15px;
         border-radius: 3px;
         background: #fff;
         display: inline-block;
     }
+
     .smalltext {
         padding-top: 5px;
         font-size: 16px;
-	}
-	@media only screen and (min-width : 750px){
-		.mob-collapse{
-			display: none;
-		}
-		#gendesk{
-			font-size: 45px !important;
-		}
-	}
-	@media only screen and (max-width: 750px){
-		#gendesk{
-			font-size: 35px;
-		}
-	}	
+    }
 </style>
 <script>
     (function(d) {
@@ -477,27 +512,16 @@
     })(document);
 </script>
 
-<script>
-		function w3_open() {
-			document.getElementById("mySidebar").style.display = "block";
-		  }
-		  
-		  function w3_close() {
-			document.getElementById("mySidebar").style.display = "none";
-		  }
-</script>
 
 <body class="new-background" data-spy="scroll" data-target="navbar1" offset=20 onload="test();">
     <!-- scroll bar-->
     <div class="scrollbar" id="style-1">
         <div class="force-overflow"></div>
-	</div>
-	
-	<!--<img src="images/whitelogo.png" style="width:30%;" onclick="w3_open()"/>-->
+    </div>
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav class="w3-sidebar w3-bar-block w3-small w3-center w3-collapse w3-card w3-animate-left" id="mySidebar">
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
         <!-- Avatar image in top left corner -->
-        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">&times;</button>
+        <!-- <img src="images/whitelogo.png" style="width:30%"> -->
         <ul>
             
                 <li data-menuanchor="#main">
@@ -512,7 +536,7 @@
                     <p>HOME</p>
                 </a>
             </li> -->
-			
+            
 
 
             <li data-menuanchor="#councils">
@@ -591,6 +615,7 @@
     </div> -->
 
 
+
 	<style>
 		.nav-button{
 			background: 0%;
@@ -599,14 +624,19 @@
 	</style>
 	<!-- Page Content -->
 	<button class="w3-button w3-xlarge mob-collapse nav-button" onclick="w3_open()">&#9776;</button>	
+
     <div class="w3-padding-large" id="main">
-		<!-- Header/Home -->
-		
+        <!-- Header/Home -->
         <header class="w3-container w3-center" id="home">
+<<<<<<< HEAD
 
              <img src="images/Logos/FB-01.png" class="w3-image w3-animate-zoom image-responsive mobile-hide" width="100%" height="100%"> 
              <img src="images/Logos/FB-01-mobile.png" class="w3-image w3-animate-zoom image-responsive mobile-show" width="100%" height="100%"> 
 
+=======
+             <img src="images/Logos/FB-01.png" class="w3-image w3-animate-zoom image-responsive mobile-hide" width="100%" height="100%"> 
+             <img src="images/Logos/FB-01-mobile.png" class="w3-image w3-animate-zoom image-responsive mobile-show" width="100%" height="100%">
+>>>>>>> ab0f3cc243337490572b083ff7f7754cff039c52
            
 
 
@@ -639,6 +669,9 @@
   animation:         fade_move_down 4s ease-in-out infinite;
 }
 }
+
+
+
 @media screen and (min-width: 300px) and (max-width: 700px) {
         /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
         .text-web {
@@ -646,7 +679,7 @@
         }
         .text-mobile{
             font-family: Century Gothic; 
-            font-size:  10px; 
+            font-size:  12px; 
             line-height:15pt;   
             text-align: justify;
             text-justify: inter-word; justify-content: center;   margin-top: auto;
@@ -654,6 +687,7 @@
             margin-right: auto;
             margin-left: auto;
         }
+
     }
     @media screen and (min-width: 700px) {
         /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
@@ -670,7 +704,9 @@
         .text-mobile{
             display: none;
         }
+
     }
+
 
 @media only screen and (max-width: 850px){
   .scroll-down {
@@ -716,7 +752,9 @@
 }
             </style>
 
+
             <a href="#gendesk" style="padding-bottom: 5000px;" class="sliding-link"><div id="button" class="scroll-down" style="margin-top: -35px;margin-left:-10px;"></div></a>
+
 
             <!--Animation Ends Here-->
 
@@ -737,7 +775,8 @@
         <div class="w3-center w3-container" style="margin-top:200px">
 
 
-            <p style="font-family: 'Century Gothic's; align-content: center; line-height: 30pt;" class="nowrap" id="gendesk">Letter from the Secretary-General</p><br>
+
+            <p style="font-family: 'Century Gothic'; align-content: center; line-height: 30pt;" class="nowrap" id="gendesk">Letter from the Secretary-General</p><br>
 
 			<p class = "text-web">
 
@@ -760,7 +799,7 @@
                 display:none;
                 }
                 .btn-container{
-                margin: auto;
+                margin-left: 110px;
                 height:44px;
                 width:166.23px;
                 
@@ -779,31 +818,31 @@
                 cursor:pointer;
                 border:none;
                 padding:8px;
-                font-size:20px;
 
-                /*----------------------------------------------------------------------*/
-                background:#F6DBA6/*linear-gradient(141deg, #f6dba6 0%, #f6dba6 51%, #f6dba6 75%)*/;
-                /*----------------------------------------------------------------------*/
+                font-size:10px;
+                background:linear-gradient(141deg, #f6dba6 0%, #f6dba6 51%, #f6dba6 75%);
+
 
                 color:white;
-                font-family:cursive;
+                font-family:Century Gothic;
                 box-sizing:border-box;
+                outline:none;
                 }
             </style>
             <p class = "text-mobile">
             
                     It is my absolute privilege to announce the Sixth edition of the VIT Chennai Model United Nations. <br /><br />
-                    Being exposed to the concept of Model United Nations as a concept pretty early into my school life, I had the opportunity of understanding all about these events. I was introduced to Model United Nations conferences as a public speaking competition. I was told that these events can serve as a brilliant stepping stone to help me understand how to improve my oratory and debating skills. Even though this was not the full picture, it did provide a good insight into the same.<div>
-                            <br>
+                    Being exposed to the concept of Model United Nations as a concept pretty early into my school life, I had the opportunity of understanding all about these events. I was introduced to Model United Nations conferences as a public speaking competition. I was told that these events can serve as a brilliant stepping stone to help me understand how to improve my oratory and debating skills. Even though this was not the full picture, it did provide a good insight into the same.
                            <span id="text">
+                            <br /></br />
                     As I participated in more MUNs along the way I understood that the purpose of a Model UN Conference is not just to help one improve their public speaking abilities. It’s to generate and spark interest in the work that the United Nations engages in. It is to raise awareness about the many critical issues that are many times overlooked by an average citizen. Model UN conferences help in incredibly improving critical thinking, reasoning, and logical analysis. It gives participants a chance to understand the insights behind raw data and figures. With the Internet at our disposal nowadays, it is incredibly easy to get information on world issues. Statistics are readily available. MUNs empower individuals to take insights from the competitive debate and look at the bigger picture. <br /><br />
                     VIT Chennai Model United Nations has consistently been one of the best conferences in India. We have always hosted brilliant competition across multiple types of committees in our previous editions. MUNs are brilliant forums for knowledge and understanding issues of International importance, be it from the Geopolitical, Economic, Social, Security or Cultural arena. I firmly believe VITCMUN stands for the academic nature of these conferences.  <br /><br />
                     VIT Chennai Model United Nations has always been envisioned as a conference that fosters competition to its maximum potential. Our Executive Board members are always selected through an elaborate selection process. With an extensive understanding of International affairs and brilliant experience, they have time and again ensured that the delegates take insightful learning back home after the conference.  <br /><br />
                     VIT Chennai Model UN has been providing breakthroughs in delegate resources time and again. Our Tech team, throughout the last three editions, brought immense progress in the form of E-Chits to the Chennai MUN Circuit. Developed completely by a team of highly motivated students, it does provide an alternative approach to the question of chits in a Model UN Conference. Our E-Chit system facilitated a grand total of 3129 chits in VITCMUN 2019. This time, we will be trying to expand on this concept and try to ensure ease of access for council proceedings in more areas. <br /><br /> 
                     It is with great pride and honor, that I invite you to the Sixth Edition of this conference on the 20th, 21st and 22nd of March, 2020.  <br /><br />
-                    Siddharth Banerjee<br /> Secretary-General,<br /> VITCMUN 2020.  <br /><br /> </div></p>
+                    Siddharth Banerjee<br /> Secretary-General,<br /> VITCMUN 2020.  <br /><br /></span></p>
                     <div class="btn-container">
-                            <button id="toggle">Read More</button>
+                            <button id="toggle" style="background: none;">Read More</button>
                             </div>
                 <script>
                     $(document).ready(function() {
@@ -865,6 +904,7 @@
                 <!-- <div class="w3-col l6 m12 s12">
                     <img class="w3-animate-opacity w3-image" src="images/UNCSW.png" style="height:100% ;width:100%">
                 </div>
+
                 <div class="w3-col l6 m12 s12">
                     <div class="w3-hide-small" style="margin-top:140px">
                     </div>
@@ -892,6 +932,7 @@
                 <!-- <div class="w3-col l6 m12 s12">
                     <img class="w3-animate-opacity w3-image" src="images/aippm.png" style="height:100%;width:100%">
                 </div>
+
                 <div class="w3-col l6 m12 s12">
                     <div class="w3-hide-small" style="margin-top:140px">
                     </div>
@@ -1024,9 +1065,11 @@
         <!-- <script>
             var slideIndex = 1;
             showDivs1(slideIndex);
+
             function plusDivs1(n) {
                 showDivs1(slideIndex += n);
             }
+
             function showDivs1(n) {
                 var i;
                 var x = document.getElementsByClassName("mySlides");
@@ -1064,6 +1107,8 @@
                     <div class="w3-col l4 m4"> -->
                         <!--button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-round-xlarge w3-border w3-padding-large  w3-hover-white" style="margin-top:10px;font-size:20px; text-decoration:none"> Applications Coming Soon!
   </button>
+
+
     <div id="id01" class="w3-modal">
       <div class="w3-modal-content">
         <header class="w3-container w3-padding-16 w3-gray">
@@ -1100,6 +1145,9 @@
 
         </div> -->
         <!--a href="http://vitcmun.in/DelegateApplication" style="
+
+
+
 a {
   position: fixed;
   cursor: pointer;
@@ -1132,6 +1180,7 @@ a:after {
   transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
   transform-origin: left;
 }
+
 .line {
   position: absolute;
   background: #f26522;
@@ -1168,6 +1217,7 @@ a:after {
   transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
   transform-origin: right;
 }
+
 a:hover .text,
 a:active .text {
   transform: translate3d(0, 0, 0);
@@ -1204,8 +1254,11 @@ a:hover .line.-bottom,
 a:active .line.-bottom {
   transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
   transform-origin: left;
+
 }
+
 "
+
   <span class="line -right"></span>
   <span class="line -top"></span>
   <span class="line -left"></span>
@@ -1219,15 +1272,23 @@ a:active .line.-bottom {
 
             <script>
                 // var countDownDate = new Date("Dec 29, 2017 18:00:00").getTime();
+
+
                 // var x = setInterval(function() {
+
+
                 //     var now = new Date().getTime();
+
                 //     var distance = countDownDate - now;
+
                 //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 //     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
                 //     document.getElementById("demo").innerHTML = hours + "h "
                 //     + minutes + "m " + seconds + "s ";
+
                 //     if (distance < 0) {
                 //         clearInterval(x);
                 //         document.getElementById("demo").innerHTML = "EXPIRED";
@@ -1976,6 +2037,7 @@ a:active .line.-bottom {
         </div>
 
 
+
     </div> -->
 
             
@@ -1986,9 +2048,11 @@ a:active .line.-bottom {
         <script>
             var slideIndex2 = 1;
             showDivs2(slideIndex2);
+
             function plusDivs2(n2) {
                 showDivs2(slideIndex2 += n2);
             }
+
             function showDivs2(n2) {
                 var i2;
                 var x2 = document.getElementsByClassName("mySlides2");
@@ -2064,6 +2128,7 @@ a:active .line.-bottom {
                 
             </div>
     </div>    
+
     <footer id="footer">
           <style>
             .footer {
@@ -2156,3 +2221,4 @@ navigator.serviceWorker.register('service-worker.js')
 
 
 </html>
+
