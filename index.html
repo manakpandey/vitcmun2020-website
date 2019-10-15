@@ -2,6 +2,7 @@
 <html>
 <title>VITCMUN 2020</title>
 <meta charset="UTF-8">
+
 <link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
 <link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
 <link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
@@ -16,11 +17,11 @@
 <link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.html">
 <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
 
-<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css"> -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">  -->
+<!-- <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-red.css"> -->
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-theme-pink.css">
-<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/brands.css" integrity="sha384-oT8S/zsbHtHRVSs2Weo00ensyC4I8kyMsMhqTD4XrWxyi8NHHxnS0Hy+QEtgeKUE" crossorigin="anonymous">
+
 <!-- icons -->
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 
@@ -39,10 +40,12 @@
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-132819915-1"></script>
 <script>
     window.dataLayer = window.dataLayer || [];
+
     function gtag() {
         dataLayer.push(arguments);
     }
     gtag('js', new Date());
+
     gtag('config', 'UA-132819915-1');
 </script>
 
@@ -65,7 +68,6 @@
 <meta http-equiv="Expires" content="0" />
 
 
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
 <!--NOTE:: Added smooth scrolling-->
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
@@ -73,17 +75,21 @@
     $(document).ready(function() {
         // Add smooth scrolling to all links
         $("a").on('click', function(event) {
+
             // Make sure this.hash has a value before overriding default behavior
             if (this.hash !== "") {
                 // Prevent default anchor click behavior
                 event.preventDefault();
+
                 // Store hash
                 var hash = this.hash;
+
                 // Using jQuery's animate() method to add smooth page scroll
                 // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
                 $('html, body').animate({
                     scrollTop: $(hash).offset().top
                 }, 800, function() {
+
                     // Add hash (#) to URL when done scrolling (default click behavior)
                     window.location.hash = hash;
                 });
@@ -106,6 +112,7 @@
     body {
         text-decoration: none !important;
     }
+
     .new-background{
         background-image: linear-gradient(45deg,#1b0b14,#511926,#1b0b14,#511926,#1b0b14);
     }
@@ -118,6 +125,7 @@
         .mobile-show{
             display: block;
         }
+
     }
     @media screen and (min-width: 700px) {
         /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
@@ -127,10 +135,14 @@
         .mobile-show{
             display: none;
         }
+
     }
+
+
     .hover-newpink{
         color:#e6b2c8;
     }
+
     #apply {
         position: fixed;
         cursor: pointer;
@@ -145,12 +157,14 @@
         font-size: 1.5em;
         letter-spacing: 0.07em;
     }
+
     #apply .text {
         font-family: ;
         transform: translate3d(0, 0.7em, 0);
         display: block;
         transition: transform 0.4s cubic-bezier(0.2, 0, 0, 1) 0.4s;
     }
+
     #apply:after {
         position: absolute;
         content: '';
@@ -163,10 +177,12 @@
         transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
         transform-origin: left;
     }
+
     .line {
         position: absolute;
         background: #f26522;
     }
+
     .line.-right,
     .line.-left {
         width: 3px;
@@ -174,6 +190,7 @@
         top: -3px;
         transform: scale3d(1, 0, 1);
     }
+
     .line.-top,
     .line.-bottom {
         height: 3px;
@@ -181,31 +198,37 @@
         right: -3px;
         transform: scale3d(0, 1, 1);
     }
+
     .line.-right {
         right: -3px;
         transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.23s;
         transform-origin: top;
     }
+
     .line.-top {
         top: -3px;
         transition: transform 0.08s linear 0.43s;
         transform-origin: left;
     }
+
     .line.-left {
         left: -3px;
         transition: transform 0.08s linear 0.51s;
         transform-origin: bottom;
     }
+
     .line.-bottom {
         bottom: -3px;
         transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
         transform-origin: right;
     }
+
     #apply:hover .text,
     #apply:active .text {
         transform: translate3d(0, 0, 0);
         transition: transform 0.6s cubic-bezier(0.2, 0, 0, 1) 0.4s;
     }
+
     #apply:hover:after,
     #apply:active:after {
         transform: scale3d(0, 1, 1);
@@ -214,30 +237,37 @@
         transform-origin: right;
         transition: transform 0.2s cubic-bezier(1, 0, 0.65, 1.01) 0.17s, right 0.2s cubic-bezier(1, 0, 0.65, 1.01), left 0s 0.3s;
     }
+
     #apply:hover .line,
     #apply:active .line {
         transform: scale3d(1, 1, 1);
     }
+
     #apply:hover .line.-right,
     #apply:active .line.-right {
         transition: transform 0.1s cubic-bezier(1, 0, 0.65, 1.01) 0.2s;
         transform-origin: bottom;
     }
+
     #apply:hover .line.-top,
     #apply:active .line.-top {
         transition: transform 0.08s linear 0.4s;
         transform-origin: right;
     }
+
     #apply:hover .line.-left,
     #apply:active .line.-left {
         transition: transform 0.08s linear 0.48s;
         transform-origin: top;
     }
+
     #apply:hover .line.-bottom,
     #apply:active .line.-bottom {
         transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
         transform-origin: left;
+
     }
+
     body,
     h1,
     h2,
@@ -247,6 +277,7 @@
     h6 {
         font-family: "PT Sans", Sans-Serif;
     }
+
     p {
         font-family: "PT Sans", Sans-Serif;
         font-style: normal;
@@ -257,19 +288,24 @@
         font-stretch: 200em !important;
         text-decoration: none;
     }
+
     .w3-card,.w3-card-2{box-shadow:0 2px 5px 0 rgba(0,0,0,0.16),0 2px 10px 0 rgba(0,0,0,0.12);background-color : #f6dba6;filter:opacity()} 
+
     .w3-row-padding img {
         margin-bottom: 12px
     }
+
     /* Set the width of the sidebar to 120px */
     .w3-sidebar {
         width: 120px;
         background: #0B0B14;
     }
+
     /* Add a left margin to the "page content" that matches the width of the sidebar (120px) */
     #main {
         margin-left: 120px
     }
+
     /* Remove ma.rgins from "page content" on small screens */
     @media only screen and (max-width: 600px) {
         #main {
@@ -280,30 +316,37 @@
             margin-left: 100px;
         }
     }
+
     @-webkit-keyframes fadeIn {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
+
     @-o-keyframes fadeIn {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
+
     @keyframes fadeIn {
         from {
             opacity: 0;
         }
+
         to {
             opacity: 1;
         }
     }
+
     .fade-in {
         opacity: 0;
         -webkit-animation: fadeIn ease-in 1;
@@ -316,30 +359,35 @@
         -o-animation-duration: 1s;
         animation-duration: 1s;
     }
+
     .fade-in.one {
         -webkit-animation-delay: 1s;
         -o-animation-delay: 1s;
         animation-delay: 1s;
         font-size: 40px;
     }
+
     .fade-in.two {
         -webkit-animation-delay: 2s;
         -o-animation-delay: 2s;
         animation-delay: 2s;
         font-size: 40px;
     }
+
     .fade-in.three {
         -webkit-animation-delay: 3s;
         -o-animation-delay: 3s;
         animation-delay: 3s;
         font-size: 40px;
     }
+
     .fade-in.four {
         -webkit-animation-delay: 4s;
         -o-animation-delay: 4s;
         animation-delay: 4s;
         font-size: 40px;
     }
+
     /* fa fa icons */
     .fa {
         padding: 20px;
@@ -352,12 +400,15 @@
     .fa:hover {
   opacity: 0.7;
 }
+
 /* Set a specific color for each brand */
+
 /* Facebook */
 .fa-facebook {
   /* background:#fff; */
   color:#f6dba6;
 }
+
 /* Twitter */
 .fa-twitter {
     /* background:#fff; */
@@ -379,21 +430,25 @@
         border-radius: 10px;
         background-color: #565555;
     }
+
     #style-2::-webkit-scrollbar {
         width: 12px;
         background-color: #565555;
     }
+
     #style-2::-webkit-scrollbar-thumb {
         border-radius: 10px;
         -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, .3);
         background-color: #666666;
     }
+
     a,
     i,
     p,
     body {
         text-decoration: none;
     }
+
     #clockdiv {
         font-family: sans-serif;
         color: #000;
@@ -402,35 +457,25 @@
         text-align: center;
         font-size: 30px;
     }
+
     #clockdiv>div {
         padding: 10px;
         border-radius: 3px;
         background: #fff;
         display: inline-block;
     }
+
     #clockdiv div>span {
         padding: 15px;
         border-radius: 3px;
         background: #fff;
         display: inline-block;
     }
+
     .smalltext {
         padding-top: 5px;
         font-size: 16px;
-	}
-	@media only screen and (min-width : 750px){
-		.mob-collapse{
-			display: none;
-		}
-		#gendesk{
-			font-size: 45px !important;
-		}
-	}
-	@media only screen and (max-width: 750px){
-		#gendesk{
-			font-size: 35px;
-		}
-	}	
+    }
 </style>
 <script>
     (function(d) {
@@ -463,27 +508,16 @@
     })(document);
 </script>
 
-<script>
-		function w3_open() {
-			document.getElementById("mySidebar").style.display = "block";
-		  }
-		  
-		  function w3_close() {
-			document.getElementById("mySidebar").style.display = "none";
-		  }
-</script>
 
 <body class="new-background" data-spy="scroll" data-target="navbar1" offset=20 onload="test();">
     <!-- scroll bar-->
     <div class="scrollbar" id="style-1">
         <div class="force-overflow"></div>
-	</div>
-	
-	<!--<img src="images/whitelogo.png" style="width:30%;" onclick="w3_open()"/>-->
+    </div>
     <!-- Icon Bar (Sidebar - hidden on small screens) -->
-    <nav class="w3-sidebar w3-bar-block w3-small w3-center w3-collapse w3-card w3-animate-left" id="mySidebar">
+    <nav class="w3-sidebar w3-bar-block w3-small w3-hide-small w3-center">
         <!-- Avatar image in top left corner -->
-        <button class="w3-bar-item w3-button w3-large w3-hide-large" onclick="w3_close()">&times;</button>
+        <!-- <img src="images/whitelogo.png" style="width:30%"> -->
         <ul>
             
                 <li data-menuanchor="#main">
@@ -498,7 +532,7 @@
                     <p>HOME</p>
                 </a>
             </li> -->
-			
+            
 
 
             <li data-menuanchor="#councils">
@@ -576,22 +610,12 @@
         </div>
     </div> -->
 
-	<style>
-		.nav-button{
-			background: 0%;
-			color: #F6DBA6;
-		}
-	</style>
-	<!-- Page Content -->
-	<button class="w3-button w3-xlarge mob-collapse nav-button" onclick="w3_open()">&#9776;</button>	
+    <!-- Page Content -->
     <div class="w3-padding-large" id="main">
-		<!-- Header/Home -->
-		
+        <!-- Header/Home -->
         <header class="w3-container w3-center" id="home">
-
-             <img src="images/FB-01.png" class="w3-image w3-animate-zoom image-responsive mobile-hide" width="100%" height="100%"> 
-             <img src="images/FB-01-mobile.png" class="w3-image w3-animate-zoom image-responsive mobile-show" width="100%" height="100%"> 
-
+             <img src="images/Logos/FB-01.png" class="w3-image w3-animate-zoom image-responsive mobile-hide" width="100%" height="100%"> 
+             <img src="images/Logos/FB-01-mobile.png" class="w3-image w3-animate-zoom image-responsive mobile-show" width="100%" height="100%">
            
 
 
@@ -624,6 +648,9 @@
   animation:         fade_move_down 4s ease-in-out infinite;
 }
 }
+
+
+
 @media screen and (min-width: 300px) and (max-width: 700px) {
         /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
         .text-web {
@@ -631,7 +658,7 @@
         }
         .text-mobile{
             font-family: Century Gothic; 
-            font-size:  10px; 
+            font-size:  12px; 
             line-height:15pt;   
             text-align: justify;
             text-justify: inter-word; justify-content: center;   margin-top: auto;
@@ -639,6 +666,7 @@
             margin-right: auto;
             margin-left: auto;
         }
+
     }
     @media screen and (min-width: 700px) {
         /* USE THESE CLASSES TO HIDE CONTENT ON MOBILE */
@@ -655,7 +683,18 @@
         .text-mobile{
             display: none;
         }
+
     }
+
+
+
+
+
+
+
+
+
+
 @media only screen and (max-width: 850px){
   .scroll-down {
   overflow : auto;
@@ -699,7 +738,7 @@
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
             </style>
-            <a href="#gendesk" style="padding-bottom: 5000px;" class="sliding-link"><div id="button" class="scroll-down" style="margin-top: -35px;margin-left:-10px;"></div></a>
+            <a href="#gendesk" style="padding-bottom: 5000px; margin-top: -50px" class="sliding-link"><div id="button" class="scroll-down"></div></a>
             <!--Animation Ends Here-->
 
         </header>
@@ -717,10 +756,8 @@
         }
         </style> -->
         <div class="w3-center w3-container" style="margin-top:200px">
-
-            <p style="font-family: 'Century Gothic's; align-content: center; line-height: 30pt;" class="nowrap" id="gendesk">Letter from the Secretary-General</p><br>
-
-			<p class = "text-web">
+            <p style="font-family: 'Century Gothic'; font-size:50px;align-content: center; line-height: 30pt;" class="nowrap" id="gendesk">Letter from the Secretary-General</p><br>
+            <p class = "text-web">
             
                     It is my absolute privilege to announce the Sixth edition of the VIT Chennai Model United Nations. <br /><br />
                     Being exposed to the concept of Model United Nations as a concept pretty early into my school life, I had the opportunity of understanding all about these events. I was introduced to Model United Nations conferences as a public speaking competition. I was told that these events can serve as a brilliant stepping stone to help me understand how to improve my oratory and debating skills. Even though this was not the full picture, it did provide a good insight into the same.<br /> <br /> 
@@ -740,7 +777,7 @@
                 display:none;
                 }
                 .btn-container{
-                margin: auto;
+                margin-left: 110px;
                 height:44px;
                 width:166.23px;
                 
@@ -759,27 +796,28 @@
                 cursor:pointer;
                 border:none;
                 padding:8px;
-                font-size:20px;
+                font-size:10px;
                 background:linear-gradient(141deg, #f6dba6 0%, #f6dba6 51%, #f6dba6 75%);
                 color:white;
-                font-family:cursive;
+                font-family:Century Gothic;
                 box-sizing:border-box;
+                outline:none;
                 }
             </style>
             <p class = "text-mobile">
             
                     It is my absolute privilege to announce the Sixth edition of the VIT Chennai Model United Nations. <br /><br />
-                    Being exposed to the concept of Model United Nations as a concept pretty early into my school life, I had the opportunity of understanding all about these events. I was introduced to Model United Nations conferences as a public speaking competition. I was told that these events can serve as a brilliant stepping stone to help me understand how to improve my oratory and debating skills. Even though this was not the full picture, it did provide a good insight into the same.<div>
-                            <br>
+                    Being exposed to the concept of Model United Nations as a concept pretty early into my school life, I had the opportunity of understanding all about these events. I was introduced to Model United Nations conferences as a public speaking competition. I was told that these events can serve as a brilliant stepping stone to help me understand how to improve my oratory and debating skills. Even though this was not the full picture, it did provide a good insight into the same.
                            <span id="text">
+                            <br /></br />
                     As I participated in more MUNs along the way I understood that the purpose of a Model UN Conference is not just to help one improve their public speaking abilities. It’s to generate and spark interest in the work that the United Nations engages in. It is to raise awareness about the many critical issues that are many times overlooked by an average citizen. Model UN conferences help in incredibly improving critical thinking, reasoning, and logical analysis. It gives participants a chance to understand the insights behind raw data and figures. With the Internet at our disposal nowadays, it is incredibly easy to get information on world issues. Statistics are readily available. MUNs empower individuals to take insights from the competitive debate and look at the bigger picture. <br /><br />
                     VIT Chennai Model United Nations has consistently been one of the best conferences in India. We have always hosted brilliant competition across multiple types of committees in our previous editions. MUNs are brilliant forums for knowledge and understanding issues of International importance, be it from the Geopolitical, Economic, Social, Security or Cultural arena. I firmly believe VITCMUN stands for the academic nature of these conferences.  <br /><br />
                     VIT Chennai Model United Nations has always been envisioned as a conference that fosters competition to its maximum potential. Our Executive Board members are always selected through an elaborate selection process. With an extensive understanding of International affairs and brilliant experience, they have time and again ensured that the delegates take insightful learning back home after the conference.  <br /><br />
                     VIT Chennai Model UN has been providing breakthroughs in delegate resources time and again. Our Tech team, throughout the last three editions, brought immense progress in the form of E-Chits to the Chennai MUN Circuit. Developed completely by a team of highly motivated students, it does provide an alternative approach to the question of chits in a Model UN Conference. Our E-Chit system facilitated a grand total of 3129 chits in VITCMUN 2019. This time, we will be trying to expand on this concept and try to ensure ease of access for council proceedings in more areas. <br /><br /> 
                     It is with great pride and honor, that I invite you to the Sixth Edition of this conference on the 20th, 21st and 22nd of March, 2020.  <br /><br />
-                    Siddharth Banerjee<br /> Secretary-General,<br /> VITCMUN 2020.  <br /><br /> </div></p>
+                    Siddharth Banerjee<br /> Secretary-General,<br /> VITCMUN 2020.  <br /><br /></span></p>
                     <div class="btn-container">
-                            <button id="toggle">Read More</button>
+                            <button id="toggle" style="background: none;">Read More</button>
                             </div>
                 <script>
                     $(document).ready(function() {
@@ -841,6 +879,7 @@
                 <!-- <div class="w3-col l6 m12 s12">
                     <img class="w3-animate-opacity w3-image" src="images/UNCSW.png" style="height:100% ;width:100%">
                 </div>
+
                 <div class="w3-col l6 m12 s12">
                     <div class="w3-hide-small" style="margin-top:140px">
                     </div>
@@ -868,6 +907,7 @@
                 <!-- <div class="w3-col l6 m12 s12">
                     <img class="w3-animate-opacity w3-image" src="images/aippm.png" style="height:100%;width:100%">
                 </div>
+
                 <div class="w3-col l6 m12 s12">
                     <div class="w3-hide-small" style="margin-top:140px">
                     </div>
@@ -1000,9 +1040,11 @@
         <!-- <script>
             var slideIndex = 1;
             showDivs1(slideIndex);
+
             function plusDivs1(n) {
                 showDivs1(slideIndex += n);
             }
+
             function showDivs1(n) {
                 var i;
                 var x = document.getElementsByClassName("mySlides");
@@ -1036,9 +1078,12 @@
 
                         <!---->
                     <!-- </div>
+
                     <div class="w3-col l4 m4"> -->
                         <!--button onclick="document.getElementById('id01').style.display='block'" class="w3-btn w3-round-xlarge w3-border w3-padding-large  w3-hover-white" style="margin-top:10px;font-size:20px; text-decoration:none"> Applications Coming Soon!
   </button>
+
+
     <div id="id01" class="w3-modal">
       <div class="w3-modal-content">
         <header class="w3-container w3-padding-16 w3-gray">
@@ -1052,6 +1097,7 @@
       </div>
     </div-->
                     <!-- </div>
+
                 </div>
             </div>
             <div class="w3-container">
@@ -1071,8 +1117,12 @@
                     <p style="color:black; font-size:1px">hi</p>
                 </div>
             </div>
+
         </div> -->
         <!--a href="http://vitcmun.in/DelegateApplication" style="
+
+
+
 a {
   position: fixed;
   cursor: pointer;
@@ -1105,6 +1155,7 @@ a:after {
   transition: transform 0.8s cubic-bezier(1, 0, 0.37, 1) 0.2s, right 0.2s cubic-bezier(0.04, 0.48, 0, 1) 0.6s, left 0.4s cubic-bezier(0.04, 0.48, 0, 1) 0.6s;
   transform-origin: left;
 }
+
 .line {
   position: absolute;
   background: #f26522;
@@ -1141,6 +1192,7 @@ a:after {
   transition: transform 0.3s cubic-bezier(1, 0, 0.65, 1.01);
   transform-origin: right;
 }
+
 a:hover .text,
 a:active .text {
   transform: translate3d(0, 0, 0);
@@ -1177,8 +1229,11 @@ a:hover .line.-bottom,
 a:active .line.-bottom {
   transition: transform 0.5s cubic-bezier(0, 0.53, 0.29, 1) 0.56s;
   transform-origin: left;
+
 }
+
 "
+
   <span class="line -right"></span>
   <span class="line -top"></span>
   <span class="line -left"></span>
@@ -1192,15 +1247,23 @@ a:active .line.-bottom {
 
             <script>
                 // var countDownDate = new Date("Dec 29, 2017 18:00:00").getTime();
+
+
                 // var x = setInterval(function() {
+
+
                 //     var now = new Date().getTime();
+
                 //     var distance = countDownDate - now;
+
                 //     var days = Math.floor(distance / (1000 * 60 * 60 * 24));
                 //     var hours = Math.floor((distance % (1000 * 60 * 60 * 24)) / (1000 * 60 * 60));
                 //     var minutes = Math.floor((distance % (1000 * 60 * 60)) / (1000 * 60));
                 //     var seconds = Math.floor((distance % (1000 * 60)) / 1000);
+
                 //     document.getElementById("demo").innerHTML = hours + "h "
                 //     + minutes + "m " + seconds + "s ";
+
                 //     if (distance < 0) {
                 //         clearInterval(x);
                 //         document.getElementById("demo").innerHTML = "EXPIRED";
@@ -1881,6 +1944,7 @@ a:active .line.-bottom {
                 </header>
             </div>
         </div>
+
     </div> -->
 
 
@@ -1891,9 +1955,11 @@ a:active .line.-bottom {
         <script>
             var slideIndex2 = 1;
             showDivs2(slideIndex2);
+
             function plusDivs2(n2) {
                 showDivs2(slideIndex2 += n2);
             }
+
             function showDivs2(n2) {
                 var i2;
                 var x2 = document.getElementsByClassName("mySlides2");
@@ -1968,94 +2034,4 @@ a:active .line.-bottom {
                 
             </div>
     </div>    
-    <footer id="footer">
-          <style>
-            .footer {
-                    position: sticky;
-                    left: 0;
-                    bottom: 0;
-                    width: 100%;
-                    background-color:#0B0B14;
-                    color: white;
-                    text-align: center;
-                    }
-            #contact_us{
-                font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                font-size: 175%;
-                color: #f6dba6;
-            }
-            @media screen and (max-width: 600px){
-                #contact_us{
-                    font-size: 70%;
-                    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-                    color: #f6dba6;
-                }
-
-                #mobile_img{
-                    width: 45%;
-                    height: 45%;;
-                }
-            }
-            </style>
-        
-        <div class="footer">
-            <div class="w3-row-padding-16 w3-center">
-                <div class="w3-col s6 m6 l6 w3-center" id="column">
-                    <div class="w3-content">
-                        <img src="images/Logos/logo_main.png" style="width: 85px;height: 85px;">
-                    </div>
-                </div>
-                    <div class="w3-col s6 m6 l6 w3-center">
-                        <div class="w3-content w3-large w3-mobile">
-                            <p style="font-size: 20px; color: #f6dba6;"><b>Contact</b>Us</p>
-                            <i class="fa fa-map w3-hover-opacity w3-xlarge"></i>
-                            &nbsp;
-                            <i class="fa fa-phone-square w3-hover-opacity w3-xlarge"></i>
-                        </div>
-                    </div>
-                </div>
-                <div class="w3-row w3-center w3-display-container">
-                    <style>
-                        .fa {
-                        color:#f6dba6;
-                        padding: 10px;
-                        width: 10px;
-                        text-align: center;
-                        text-decoration: none;
-                        /*margin: 5px 2px;*/
-                        }
-                        
-                    </style>
-                    <i class="fa fa-facebook-square w3-hover-opacity w3-xlarge"></i>
-                    &nbsp;
-                    <i class="fa fa-instagram w3-hover-opacity w3-xlarge"></i>
-                    &nbsp;
-                    <i class="fa fa-twitter-square w3-hover-opacity w3-xlarge"></i>
-                    <!-- End footer -->
-                </div>
-            </div>
-        </div>    
-	</footer>
-    <!-- End Contact Section -->
-
-</div>
-<!-- <span><blockquote class="instagram-media" data-instgrm-captioned data-instgrm-permalink="https://www.instagram.com/p/B3kF-7kpO9V/?utm_source=ig_embed&amp;utm_campaign=loading" data-instgrm-version="12" style=" background:#FFF; border:0; border-radius:3px; box-shadow:0 0 1px 0 rgba(0,0,0,0.5),0 1px 10px 0 rgba(0,0,0,0.15); margin: 1px; max-width:50%; min-width:50%; padding:0; width:99.375%; width:-webkit-calc(100% - 2px); width:calc(100% - 2px);"><div style="padding:16px;"> <a href="https://www.instagram.com/p/B3kF-7kpO9V/?utm_source=ig_embed&amp;utm_campaign=loading" style=" background:#FFFFFF; line-height:0; padding:0 0; text-align:center; text-decoration:none; width:100%;" target="_blank"> <div style=" display: flex; flex-direction: row; align-items: center;"> <div style="background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 40px; margin-right: 14px; width: 40px;"></div> <div style="display: flex; flex-direction: column; flex-grow: 1; justify-content: center;"> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; margin-bottom: 6px; width: 100px;"></div> <div style=" background-color: #F4F4F4; border-radius: 4px; flex-grow: 0; height: 14px; width: 60px;"></div></div></div><div style="padding: 19% 0;"></div> <div style="display:block; height:50px; margin:0 auto 12px; width:50px;"><svg width="50px" height="50px" viewBox="0 0 60 60" version="1.1" xmlns="https://www.w3.org/2000/svg" xmlns:xlink="https://www.w3.org/1999/xlink"><g stroke="none" stroke-width="1" fill="none" fill-rule="evenodd"><g transform="translate(-511.000000, -20.000000)" fill="#000000"><g><path d="M556.869,30.41 C554.814,30.41 553.148,32.076 553.148,34.131 C553.148,36.186 554.814,37.852 556.869,37.852 C558.924,37.852 560.59,36.186 560.59,34.131 C560.59,32.076 558.924,30.41 556.869,30.41 M541,60.657 C535.114,60.657 530.342,55.887 530.342,50 C530.342,44.114 535.114,39.342 541,39.342 C546.887,39.342 551.658,44.114 551.658,50 C551.658,55.887 546.887,60.657 541,60.657 M541,33.886 C532.1,33.886 524.886,41.1 524.886,50 C524.886,58.899 532.1,66.113 541,66.113 C549.9,66.113 557.115,58.899 557.115,50 C557.115,41.1 549.9,33.886 541,33.886 M565.378,62.101 C565.244,65.022 564.756,66.606 564.346,67.663 C563.803,69.06 563.154,70.057 562.106,71.106 C561.058,72.155 560.06,72.803 558.662,73.347 C557.607,73.757 556.021,74.244 553.102,74.378 C549.944,74.521 548.997,74.552 541,74.552 C533.003,74.552 532.056,74.521 528.898,74.378 C525.979,74.244 524.393,73.757 523.338,73.347 C521.94,72.803 520.942,72.155 519.894,71.106 C518.846,70.057 518.197,69.06 517.654,67.663 C517.244,66.606 516.755,65.022 516.623,62.101 C516.479,58.943 516.448,57.996 516.448,50 C516.448,42.003 516.479,41.056 516.623,37.899 C516.755,34.978 517.244,33.391 517.654,32.338 C518.197,30.938 518.846,29.942 519.894,28.894 C520.942,27.846 521.94,27.196 523.338,26.654 C524.393,26.244 525.979,25.756 528.898,25.623 C532.057,25.479 533.004,25.448 541,25.448 C548.997,25.448 549.943,25.479 553.102,25.623 C556.021,25.756 557.607,26.244 558.662,26.654 C560.06,27.196 561.058,27.846 562.106,28.894 C563.154,29.942 563.803,30.938 564.346,32.338 C564.756,33.391 565.244,34.978 565.378,37.899 C565.522,41.056 565.552,42.003 565.552,50 C565.552,57.996 565.522,58.943 565.378,62.101 M570.82,37.631 C570.674,34.438 570.167,32.258 569.425,30.349 C568.659,28.377 567.633,26.702 565.965,25.035 C564.297,23.368 562.623,22.342 560.652,21.575 C558.743,20.834 556.562,20.326 553.369,20.18 C550.169,20.033 549.148,20 541,20 C532.853,20 531.831,20.033 528.631,20.18 C525.438,20.326 523.257,20.834 521.349,21.575 C519.376,22.342 517.703,23.368 516.035,25.035 C514.368,26.702 513.342,28.377 512.574,30.349 C511.834,32.258 511.326,34.438 511.181,37.631 C511.035,40.831 511,41.851 511,50 C511,58.147 511.035,59.17 511.181,62.369 C511.326,65.562 511.834,67.743 512.574,69.651 C513.342,71.625 514.368,73.296 516.035,74.965 C517.703,76.634 519.376,77.658 521.349,78.425 C523.257,79.167 525.438,79.673 528.631,79.82 C531.831,79.965 532.853,80.001 541,80.001 C549.148,80.001 550.169,79.965 553.369,79.82 C556.562,79.673 558.743,79.167 560.652,78.425 C562.623,77.658 564.297,76.634 565.965,74.965 C567.633,73.296 568.659,71.625 569.425,69.651 C570.167,67.743 570.674,65.562 570.82,62.369 C570.966,59.17 571,58.147 571,50 C571,41.851 570.966,40.831 570.82,37.631"></path></g></g></g></svg></div><div style="padding-top: 8px;"> <div style=" color:#3897f0; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:550; line-height:18px;"> View this post on Instagram</div></div><div style="padding: 12.5% 0;"></div> <div style="display: flex; flex-direction: row; margin-bottom: 14px; align-items: center;"><div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(0px) translateY(7px);"></div> <div style="background-color: #F4F4F4; height: 12.5px; transform: rotate(-45deg) translateX(3px) translateY(1px); width: 12.5px; flex-grow: 0; margin-right: 14px; margin-left: 2px;"></div> <div style="background-color: #F4F4F4; border-radius: 50%; height: 12.5px; width: 12.5px; transform: translateX(9px) translateY(-18px);"></div></div><div style="margin-left: 8px;"> <div style=" background-color: #F4F4F4; border-radius: 50%; flex-grow: 0; height: 20px; width: 20px;"></div> <div style=" width: 0; height: 0; border-top: 2px solid transparent; border-left: 6px solid #f4f4f4; border-bottom: 2px solid transparent; transform: translateX(16px) translateY(-4px) rotate(30deg)"></div></div><div style="margin-left: auto;"> <div style=" width: 0px; border-top: 8px solid #F4F4F4; border-right: 8px solid transparent; transform: translateY(16px);"></div> <div style=" background-color: #F4F4F4; flex-grow: 0; height: 12px; width: 16px; transform: translateY(-4px);"></div> <div style=" width: 0; height: 0; border-top: 8px solid #F4F4F4; border-left: 8px solid transparent; transform: translateY(-4px) translateX(8px);"></div></div></div></a> <p style=" margin:8px 0 0 0; padding:0 4px;"> <a href="https://www.instagram.com/p/B3kF-7kpO9V/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#000; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px; text-decoration:none; word-wrap:break-word;" target="_blank">With the leadership set and ready in place, the only piece of the puzzle is the driving force behind the conference. With sheer pride, the Secretariat of VITCMUN 2020 brings to you the Organizing Committee Orientation on Wednesday, the 16th of October at 4:00 PM. Come, be part of one of the largest Model UN Conferences in India.</a></p> <p style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; line-height:17px; margin-bottom:0; margin-top:8px; overflow:hidden; padding:8px 0 7px; text-align:center; text-overflow:ellipsis; white-space:nowrap;">A post shared by <a href="https://www.instagram.com/vitcmun/?utm_source=ig_embed&amp;utm_campaign=loading" style=" color:#c9c8cd; font-family:Arial,sans-serif; font-size:14px; font-style:normal; font-weight:normal; line-height:17px;" target="_blank"> VITC Model United Nations 2020</a> (@vitcmun) on <time style=" font-family:Arial,sans-serif; font-size:14px; line-height:17px;" datetime="2019-10-13T15:47:52+00:00">Oct 13, 2019 at 8:47am PDT</time></p></div></blockquote> <script async src="//www.instagram.com/embed.js"></script> -->
-
-<!-- END PAGE CONTENT -->
-</div>
-
-</body>
-<script>
-if ('serviceWorker' in navigator) {
-console.log("Will the service worker register?");
-navigator.serviceWorker.register('service-worker.js')
-    .then(function(reg) {
-        console.log("Yes, it did.");
-    }).catch(function(err) {
-        console.log("No it didn't. This happened:", err)
-    });
-}
-</script>
-
-
-</html>
+    <footer
