@@ -482,6 +482,16 @@
         padding-top: 5px;
         font-size: 16px;
     }
+    @media only screen and (min-width : 768px){
+		#gendesk{
+			font-size: 45px !important;
+		}
+	}
+	@media only screen and (max-width: 768px){
+		#gendesk{
+			font-size: 35px;
+		}
+	}	
 </style>
 <script>
     (function(d) {
@@ -632,7 +642,7 @@
 		}
 	</style>
 	<!-- Page Content -->
-	<button class="w3-button w3-xlarge mob-collapse nav-button" onclick="w3_open()">&#9776;</button>	
+	<button class="w3-button w3-xlarge nav-button" onclick="w3_open()">&#9776;</button>	
 
     <div class="w3-padding-large" id="main">
         <!-- Header/Home -->
@@ -752,19 +762,6 @@
   50%  { opacity: 1;  }
   100% { transform:translate(0,10px) rotate(45deg); opacity: 0; }
 }
-@media only screen and (min-width : 750px){
-		.mob-collapse{
-			display: none;
-		}
-		#gendesk{
-			font-size: 45px !important;
-		}
-	}
-	@media only screen and (max-width: 750px){
-		#gendesk{
-			font-size: 35px;
-		}
-	}	
             </style>
 
 
